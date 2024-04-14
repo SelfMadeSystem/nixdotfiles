@@ -74,6 +74,7 @@ with import <nixpkgs> { };
     glpaper
     qt6.full
     qtcreator
+    cava
 
     tracker
     tracker-miners

@@ -47,7 +47,10 @@
         ];
       };
       windowrule = [
-        "noborder,^(kitty)$"
+        "noborder,^kitty$"
+      ];
+      layerrule = [
+        "blur,waybar"
       ];
       misc = {
         force_default_wallpaper = -1;
