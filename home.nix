@@ -75,6 +75,9 @@ with import <nixpkgs> { };
     qt6.full
     qtcreator
     cava
+    bun
+
+    vscode
 
     tracker
     tracker-miners
