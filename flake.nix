@@ -26,6 +26,11 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./nixos/configuration.nix
+        ];
+      };
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       homeConfigurations."sms" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -37,11 +42,9 @@
           ./modules
         ];
 
-        extraSpecialArgs = { inherit inputs system; };
-
-
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        extraSpecialArgs = { inherit inputs system; };
       };
     };
 }

@@ -2,7 +2,7 @@
 , pkgs
 , ...
 }:
-with import <nixpkgs> { };
+
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -70,14 +70,12 @@ with import <nixpkgs> { };
     pipes-rs
     peaclock
     lz4
+    lzo
     obs-studio
     glpaper
     qt6.full
-    qtcreator
     cava
     bun
-
-    vscode
 
     tracker
     tracker-miners
@@ -85,19 +83,19 @@ with import <nixpkgs> { };
     lxqt.lxqt-policykit
 
     waybar
-    swww # bg
-    dunst # notif thing
     libnotify
     rofi-wayland
 
-    (nerdfonts.override { fonts = [
-      "JetBrainsMono"
-      "Noto"
-      "SourceCodePro"
-      "Ubuntu"
-      "UbuntuMono"
-      "Terminus"
-      ]; })
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "Noto"
+        "SourceCodePro"
+        "Ubuntu"
+        "UbuntuMono"
+        "Terminus"
+      ];
+    })
   ]
   ++ (with gnome; [
     seahorse
@@ -162,6 +160,8 @@ with import <nixpkgs> { };
     TERMINAL = "kitty";
   };
 
+  # home.enableNixpkgsReleaseCheck = false;
+
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  # programs.home-manager.enable = true;
 }
