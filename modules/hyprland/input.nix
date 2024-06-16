@@ -21,8 +21,8 @@
         "$mod, F, exec, firefox"
         "$mod, T, exec, xterm"
         "$mod, RETURN, exec, kitty"
-        "$mod, Q, killactive,"
-        "$mod SHIFT, Q, exit,"
+        "$mod SHIFT, Q, killactive,"
+        # "$mod SHIFT, Q, exit," # I'm not used to this
         "$mod, SPACE, togglefloating,"
         ", Print, exec, grimshot copy area"
         "SHIFT, Print, exec, grimshot copy screen"
