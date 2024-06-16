@@ -105,6 +105,7 @@
     gnome-characters
     gnome-font-viewer
     totem
+    file-roller
   ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
