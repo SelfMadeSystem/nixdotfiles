@@ -60,7 +60,6 @@
     playerctl
     brightnessctl
     neofetch
-    nodejs
     wayvnc
     cmatrix
     busybox
@@ -75,6 +74,11 @@
     glpaper
     qt6.full
     cava
+
+    # JS
+    nodejs_latest
+    pnpm
+    pnpm-shell-completion
     bun
 
     tracker
